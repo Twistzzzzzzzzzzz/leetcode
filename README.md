@@ -1,58 +1,75 @@
-# LeetCode Python
+# LeetCode
 
-这个仓库用于长期整理 LeetCode 题解、测试用例和学习笔记，主要语言是 Python。
+这个仓库按题型路线整理 LeetCode 题解和学习笔记。先按目录顺序刷，不需要随机挑题。
 
-## 目录结构
-
-```text
-leetcode-python/
-  problems/
-    easy/       简单题题解
-    medium/     中等题题解
-    hard/       困难题题解
-  tests/        本地测试用例
-  notes/        方法论、题型和复盘笔记
-  templates/    题解模板
-  scripts/      辅助脚本
-```
-
-## 初次使用
-
-```powershell
-cd "C:\Users\Twistzz\Desktop\Files\学习\Graduate\leetcode-python"
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-dev.txt
-python -m pytest
-```
-
-## 新增题目
-
-推荐使用脚本创建题解文件和测试文件：
-
-```powershell
-python scripts/new_problem.py 1 easy "Two Sum" --method twoSum
-```
-
-生成后的文件命名约定：
+## 刷题路线
 
 ```text
-problems/easy/p0001_two_sum.py
-tests/test_p0001_two_sum.py
+leetcode/
+  README.md
+  arrays-hashing/
+  two-pointers/
+  sliding-window/
+  stack/
+  binary-search/
+  linked-list/
+  trees/
+  heap-priority-queue/
+  backtracking/
+  graphs/
+  dynamic-programming/
+  notes/
 ```
 
-建议每道题至少记录：
+推荐顺序：
 
-- 解法思路
-- 时间复杂度和空间复杂度
-- 关键边界条件
-- 做错或卡住的原因
+1. arrays-hashing
+2. two-pointers
+3. sliding-window
+4. stack
+5. binary-search
+6. linked-list
+7. trees
+8. heap-priority-queue
+9. backtracking
+10. graphs
+11. dynamic-programming
 
-## 常用命令
+## 当前进度
+
+| 顺序 | 题型 | 题号 | 题目 | 状态 |
+| --- | --- | --- | --- | --- |
+| 1 | arrays-hashing | 1929 | Concatenation of Array | 已添加 |
+
+## 文件命名
+
+题解文件统一使用：
+
+```text
+p题号_英文题目.py
+```
+
+例如：
+
+```text
+arrays-hashing/p1929_concatenation_of_array.py
+```
+
+## 每题记录
+
+每道题建议至少写清楚：
+
+- 题目在考什么
+- 自己的解题思路
+- 时间复杂度
+- 空间复杂度
+- 容易错的地方
+
+## Python 运行
+
+进入仓库后，可以直接运行某个题解文件里的示例：
 
 ```powershell
-python -m pytest
-python -m ruff check .
-python -m ruff format .
+cd "C:\Users\Twistzz\Desktop\Files\学习\Graduate\leetcode"
+python arrays-hashing/p1929_concatenation_of_array.py
 ```
-
