@@ -7,4 +7,4 @@
 | 顺序 | 题号 | 题目 | 文件 |
 | --- | --- | --- | --- |
 | 1 | 1929 | Concatenation of Array | `p1929_concatenation_of_array.py` |
-
+| 2 | 217 | Contains Duplicate | `p0217_contains_duplicate.py` |

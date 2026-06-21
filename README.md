@@ -40,6 +40,7 @@ leetcode/
 | 顺序 | 题型 | 题号 | 题目 | 状态 |
 | --- | --- | --- | --- | --- |
 | 1 | arrays-hashing | 1929 | Concatenation of Array | 已添加 |
+| 2 | arrays-hashing | 217 | Contains Duplicate | 已添加 |
 
 ## 文件命名
 
