@@ -41,24 +41,30 @@ leetcode/
 | --- | --- | --- | --- | --- |
 | 1 | arrays-hashing | 1929 | Concatenation of Array | 已添加 |
 | 2 | arrays-hashing | 217 | Contains Duplicate | 已添加 |
+| 3 | arrays-hashing | 242 | Valid Anagram | 已添加 |
+| 4 | arrays-hashing | 1 | Two Sum | 已添加 |
 
 ## 文件命名
 
-题解文件统一使用：
+每道题建议整理成两份文件：
 
 ```text
-p题号_英文题目.py
+p题号_英文题目.py   # 代码
+p题号_英文题目.md   # 思路和心得
 ```
 
 例如：
 
 ```text
 arrays-hashing/p1929_concatenation_of_array.py
+arrays-hashing/p0217_contains_duplicate.md
 ```
 
 ## 每题记录
 
-每道题建议至少写清楚：
+每道题的思路和心得建议写在同名 `.md` 笔记里，`.py` 文件主要保留可运行代码。
+
+笔记里建议至少写清楚：
 
 - 题目在考什么
 - 自己的解题思路
@@ -72,5 +78,5 @@ arrays-hashing/p1929_concatenation_of_array.py
 
 ```powershell
 cd "C:\Users\Twistzz\Desktop\Files\学习\Graduate\leetcode"
-python arrays-hashing/p1929_concatenation_of_array.py
+python arrays-hashing/p0001_two_sum.py
 ```
