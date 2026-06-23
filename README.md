@@ -8,6 +8,7 @@
 leetcode/
   README.md
   arrays-hashing/
+  strings/
   two-pointers/
   sliding-window/
   stack/
@@ -24,25 +25,27 @@ leetcode/
 推荐顺序：
 
 1. arrays-hashing
-2. two-pointers
-3. sliding-window
-4. stack
-5. binary-search
-6. linked-list
-7. trees
-8. heap-priority-queue
-9. backtracking
-10. graphs
-11. dynamic-programming
+2. strings
+3. two-pointers
+4. sliding-window
+5. stack
+6. binary-search
+7. linked-list
+8. trees
+9. heap-priority-queue
+10. backtracking
+11. graphs
+12. dynamic-programming
 
 ## 当前进度
 
 | 顺序 | 题型 | 题号 | 题目 | 状态 |
 | --- | --- | --- | --- | --- |
-| 1 | arrays-hashing | 1929 | Concatenation of Array | 已添加 |
-| 2 | arrays-hashing | 217 | Contains Duplicate | 已添加 |
-| 3 | arrays-hashing | 242 | Valid Anagram | 已添加 |
-| 4 | arrays-hashing | 1 | Two Sum | 已添加 |
+| 1 | arrays-hashing | 217 | Contains Duplicate | 已添加 |
+| 2 | arrays-hashing | 242 | Valid Anagram | 已添加 |
+| 3 | arrays-hashing | 1 | Two Sum | 已添加 |
+| 4 | arrays-hashing | 49 | Group Anagrams | 已添加 |
+| 5 | strings | 14 | Longest Common Prefix | 已添加 |
 
 ## 文件命名
 
@@ -56,7 +59,7 @@ p题号_英文题目.md   # 思路和心得
 例如：
 
 ```text
-arrays-hashing/p1929_concatenation_of_array.py
+arrays-hashing/p0001_two_sum.py
 arrays-hashing/p0217_contains_duplicate.md
 ```
 
