@@ -10,3 +10,6 @@
 | 2 | 242 | Valid Anagram | `p0242_valid_anagram.py` | `p0242_valid_anagram.md` |
 | 3 | 1 | Two Sum | `p0001_two_sum.py` | `p0001_two_sum.md` |
 | 4 | 49 | Group Anagrams | `p0049_group_anagrams.py` | `p0049_group_anagrams.md` |
+| 5 | 169 | Majority Element | `p0169_majority_element.py` | `p0169_majority_element.md` |
+| 6 | 705 | Design HashSet | `p0705_design_hashset.py` | `p0705_design_hashset.md` |
+| 7 | 706 | Design HashMap | `p0706_design_hashmap.py` | `p0706_design_hashmap.md` |

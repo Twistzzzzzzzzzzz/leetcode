@@ -45,7 +45,11 @@ leetcode/
 | 2 | arrays-hashing | 242 | Valid Anagram | 已添加 |
 | 3 | arrays-hashing | 1 | Two Sum | 已添加 |
 | 4 | arrays-hashing | 49 | Group Anagrams | 已添加 |
-| 5 | strings | 14 | Longest Common Prefix | 已添加 |
+| 5 | arrays-hashing | 169 | Majority Element | 已添加 |
+| 6 | arrays-hashing | 705 | Design HashSet | 已添加 |
+| 7 | arrays-hashing | 706 | Design HashMap | 已添加 |
+| 8 | strings | 14 | Longest Common Prefix | 已添加 |
+| 9 | two-pointers | 27 | Remove Element | 已添加 |
 
 ## 文件命名
 
