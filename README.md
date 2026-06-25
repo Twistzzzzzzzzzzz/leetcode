@@ -11,6 +11,7 @@ leetcode/
   strings/
   two-pointers/
   sorting/
+  prefix-sum/
   sliding-window/
   stack/
   binary-search/
@@ -29,15 +30,16 @@ leetcode/
 2. strings
 3. two-pointers
 4. sorting
-5. sliding-window
-6. stack
-7. binary-search
-8. linked-list
-9. trees
-10. heap-priority-queue
-11. backtracking
-12. graphs
-13. dynamic-programming
+5. prefix-sum
+6. sliding-window
+7. stack
+8. binary-search
+9. linked-list
+10. trees
+11. heap-priority-queue
+12. backtracking
+13. graphs
+14. dynamic-programming
 
 ## 当前进度
 
@@ -55,6 +57,12 @@ leetcode/
 | 10 | two-pointers | 75 | Sort Colors | 已添加 |
 | 11 | sorting | 912 | Sort an Array | 已添加 |
 | 12 | strings | 271 | Encode and Decode Strings | 已添加 |
+| 13 | prefix-sum | 304 | Range Sum Query 2D - Immutable | 已添加 |
+| 14 | prefix-sum | 238 | Product of Array Except Self | 已添加 |
+| 15 | arrays-hashing | 36 | Valid Sudoku | 已添加 |
+| 16 | arrays-hashing | 128 | Longest Consecutive Sequence | 已添加 |
+| 17 | arrays-hashing | 121 | Best Time to Buy and Sell Stock | 已添加 |
+| 18 | arrays-hashing | 122 | Best Time to Buy and Sell Stock II | 已添加 |
 
 ## 文件命名
 

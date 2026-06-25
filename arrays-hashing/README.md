@@ -13,3 +13,7 @@
 | 5 | 169 | Majority Element | `p0169_majority_element.py` | `p0169_majority_element.md` |
 | 6 | 705 | Design HashSet | `p0705_design_hashset.py` | `p0705_design_hashset.md` |
 | 7 | 706 | Design HashMap | `p0706_design_hashmap.py` | `p0706_design_hashmap.md` |
+| 8 | 36 | Valid Sudoku | `p0036_valid_sudoku.py` | `p0036_valid_sudoku.md` |
+| 9 | 128 | Longest Consecutive Sequence | `p0128_longest_consecutive_sequence.py` | `p0128_longest_consecutive_sequence.md` |
+| 10 | 121 | Best Time to Buy and Sell Stock | `p0121_best_time_to_buy_and_sell_stock.py` | `p0121_best_time_to_buy_and_sell_stock.md` |
+| 11 | 122 | Best Time to Buy and Sell Stock II | `p0122_best_time_to_buy_and_sell_stock_ii.py` | `p0122_best_time_to_buy_and_sell_stock_ii.md` |
