@@ -7,3 +7,4 @@
 | 顺序 | 题号 | 题目 | 代码 | 笔记 |
 | --- | --- | --- | --- | --- |
 | 1 | 27 | Remove Element | `p0027_remove_element.py` | `p0027_remove_element.md` |
+| 2 | 75 | Sort Colors | `p0075_sort_colors.py` | `p0075_sort_colors.md` |

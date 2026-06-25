@@ -7,3 +7,4 @@
 | 顺序 | 题号 | 题目 | 代码 | 笔记 |
 | --- | --- | --- | --- | --- |
 | 1 | 14 | Longest Common Prefix | `p0014_longest_common_prefix.py` | `p0014_longest_common_prefix.md` |
+| 2 | 271 | Encode and Decode Strings | `p0271_encode_and_decode_strings.py` | `p0271_encode_and_decode_strings.md` |

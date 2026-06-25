@@ -10,6 +10,7 @@ leetcode/
   arrays-hashing/
   strings/
   two-pointers/
+  sorting/
   sliding-window/
   stack/
   binary-search/
@@ -27,15 +28,16 @@ leetcode/
 1. arrays-hashing
 2. strings
 3. two-pointers
-4. sliding-window
-5. stack
-6. binary-search
-7. linked-list
-8. trees
-9. heap-priority-queue
-10. backtracking
-11. graphs
-12. dynamic-programming
+4. sorting
+5. sliding-window
+6. stack
+7. binary-search
+8. linked-list
+9. trees
+10. heap-priority-queue
+11. backtracking
+12. graphs
+13. dynamic-programming
 
 ## 当前进度
 
@@ -50,6 +52,9 @@ leetcode/
 | 7 | arrays-hashing | 706 | Design HashMap | 已添加 |
 | 8 | strings | 14 | Longest Common Prefix | 已添加 |
 | 9 | two-pointers | 27 | Remove Element | 已添加 |
+| 10 | two-pointers | 75 | Sort Colors | 已添加 |
+| 11 | sorting | 912 | Sort an Array | 已添加 |
+| 12 | strings | 271 | Encode and Decode Strings | 已添加 |
 
 ## 文件命名
 
