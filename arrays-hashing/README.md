@@ -17,3 +17,4 @@
 | 9 | 128 | Longest Consecutive Sequence | `p0128_longest_consecutive_sequence.py` | `p0128_longest_consecutive_sequence.md` |
 | 10 | 121 | Best Time to Buy and Sell Stock | `p0121_best_time_to_buy_and_sell_stock.py` | `p0121_best_time_to_buy_and_sell_stock.md` |
 | 11 | 122 | Best Time to Buy and Sell Stock II | `p0122_best_time_to_buy_and_sell_stock_ii.py` | `p0122_best_time_to_buy_and_sell_stock_ii.md` |
+| 12 | 41 | First Missing Positive | `p0041_first_missing_positive.py` | `p0041_first_missing_positive.md` |

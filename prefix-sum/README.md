@@ -8,3 +8,4 @@
 | --- | --- | --- | --- | --- |
 | 1 | 304 | Range Sum Query 2D - Immutable | `p0304_range_sum_query_2d_immutable.py` | `p0304_range_sum_query_2d_immutable.md` |
 | 2 | 238 | Product of Array Except Self | `p0238_product_of_array_except_self.py` | `p0238_product_of_array_except_self.md` |
+| 3 | 560 | Subarray Sum Equals K | `p0560_subarray_sum_equals_k.py` | `p0560_subarray_sum_equals_k.md` |

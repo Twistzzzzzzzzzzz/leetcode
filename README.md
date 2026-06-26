@@ -63,6 +63,15 @@ leetcode/
 | 16 | arrays-hashing | 128 | Longest Consecutive Sequence | 已添加 |
 | 17 | arrays-hashing | 121 | Best Time to Buy and Sell Stock | 已添加 |
 | 18 | arrays-hashing | 122 | Best Time to Buy and Sell Stock II | 已添加 |
+| 19 | prefix-sum | 560 | Subarray Sum Equals K | 已添加 |
+| 20 | arrays-hashing | 41 | First Missing Positive | 已添加 |
+| 21 | two-pointers | 344 | Reverse String | 已添加 |
+| 22 | two-pointers | 125 | Valid Palindrome | 已添加 |
+| 23 | two-pointers | 680 | Valid Palindrome II | 已添加 |
+| 24 | two-pointers | 1768 | Merge Strings Alternately | 已添加 |
+| 25 | two-pointers | 88 | Merge Sorted Array | 已添加 |
+| 26 | two-pointers | 26 | Remove Duplicates from Sorted Array | 已添加 |
+| 27 | two-pointers | 167 | Two Sum II - Input Array Is Sorted | 已添加 |
 
 ## 文件命名
 
