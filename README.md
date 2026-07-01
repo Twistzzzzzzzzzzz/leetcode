@@ -78,6 +78,7 @@ leetcode/
 | 31 | two-pointers | 11 | Container With Most Water | 已添加 |
 | 32 | two-pointers | 42 | Trapping Rain Water | 已添加 |
 | 33 | stack | 682 | Baseball Game | 已添加 |
+| 34 | stack | 20 | Valid Parentheses | 已添加 |
 
 ## 文件命名
 

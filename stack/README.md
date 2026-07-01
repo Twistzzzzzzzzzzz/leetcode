@@ -7,6 +7,7 @@
 | 顺序 | 题号 | 题目 | 代码 | 笔记 |
 | --- | --- | --- | --- | --- |
 | 1 | 682 | Baseball Game | `p0682_baseball_game.py` | `p0682_baseball_game.md` |
+| 2 | 20 | Valid Parentheses | `p0020_valid_parentheses.py` | `p0020_valid_parentheses.md` |
 
 ## 基础笔记
 
