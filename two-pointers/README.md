@@ -15,3 +15,8 @@
 | 7 | 88 | Merge Sorted Array | `p0088_merge_sorted_array.py` | `p0088_merge_sorted_array.md` |
 | 8 | 26 | Remove Duplicates from Sorted Array | `p0026_remove_duplicates_from_sorted_array.py` | `p0026_remove_duplicates_from_sorted_array.md` |
 | 9 | 167 | Two Sum II - Input Array Is Sorted | `p0167_two_sum_ii_input_array_is_sorted.py` | `p0167_two_sum_ii_input_array_is_sorted.md` |
+| 10 | 15 | 3Sum | `p0015_three_sum.py` | `p0015_three_sum.md` |
+| 11 | 18 | 4Sum | `p0018_four_sum.py` | `p0018_four_sum.md` |
+| 12 | 881 | Boats to Save People | `p0881_boats_to_save_people.py` | `p0881_boats_to_save_people.md` |
+| 13 | 11 | Container With Most Water | `p0011_container_with_most_water.py` | `p0011_container_with_most_water.md` |
+| 14 | 42 | Trapping Rain Water | `p0042_trapping_rain_water.py` | `p0042_trapping_rain_water.md` |

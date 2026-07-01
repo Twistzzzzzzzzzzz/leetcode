@@ -72,6 +72,12 @@ leetcode/
 | 25 | two-pointers | 88 | Merge Sorted Array | 已添加 |
 | 26 | two-pointers | 26 | Remove Duplicates from Sorted Array | 已添加 |
 | 27 | two-pointers | 167 | Two Sum II - Input Array Is Sorted | 已添加 |
+| 28 | two-pointers | 15 | 3Sum | 已添加 |
+| 29 | two-pointers | 18 | 4Sum | 已添加 |
+| 30 | two-pointers | 881 | Boats to Save People | 已添加 |
+| 31 | two-pointers | 11 | Container With Most Water | 已添加 |
+| 32 | two-pointers | 42 | Trapping Rain Water | 已添加 |
+| 33 | stack | 682 | Baseball Game | 已添加 |
 
 ## 文件命名
 
