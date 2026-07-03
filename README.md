@@ -79,6 +79,8 @@ leetcode/
 | 32 | two-pointers | 42 | Trapping Rain Water | 已添加 |
 | 33 | stack | 682 | Baseball Game | 已添加 |
 | 34 | stack | 20 | Valid Parentheses | 已添加 |
+| 35 | stack | 735 | Asteroid Collision | 已添加 |
+| 36 | stack | 150 | Evaluate Reverse Polish Notation | 已添加 |
 
 ## 文件命名
 

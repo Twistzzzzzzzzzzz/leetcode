@@ -8,6 +8,8 @@
 | --- | --- | --- | --- | --- |
 | 1 | 682 | Baseball Game | `p0682_baseball_game.py` | `p0682_baseball_game.md` |
 | 2 | 20 | Valid Parentheses | `p0020_valid_parentheses.py` | `p0020_valid_parentheses.md` |
+| 3 | 735 | Asteroid Collision | `p0735_asteroid_collision.py` | `p0735_asteroid_collision.md` |
+| 4 | 150 | Evaluate Reverse Polish Notation | `p0150_evaluate_reverse_polish_notation.py` | `p0150_evaluate_reverse_polish_notation.md` |
 
 ## 基础笔记
 
