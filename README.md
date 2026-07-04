@@ -84,6 +84,7 @@ leetcode/
 | 37 | stack | 739 | Daily Temperatures | 已添加 |
 | 38 | stack | 901 | Online Stock Span | 已添加 |
 | 39 | stack | 853 | Car Fleet | 已添加 |
+| 40 | stack | 71 | Simplify Path | 已添加 |
 
 ## 文件命名
 
