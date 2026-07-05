@@ -85,6 +85,13 @@ leetcode/
 | 38 | stack | 901 | Online Stock Span | 已添加 |
 | 39 | stack | 853 | Car Fleet | 已添加 |
 | 40 | stack | 71 | Simplify Path | 已添加 |
+| 41 | stack | 394 | Decode String | 已添加 |
+| 42 | sliding-window | 219 | Contains Duplicate II | 已添加 |
+| 43 | sliding-window | 3 | Longest Substring Without Repeating Characters | 已添加 |
+| 44 | sliding-window | 424 | Longest Repeating Character Replacement | 已添加 |
+| 45 | sliding-window | 567 | Permutation in String | 已添加 |
+| 46 | sliding-window | 209 | Minimum Size Subarray Sum | 已添加 |
+| 47 | sliding-window | 658 | Find K Closest Elements | 已添加 |
 
 ## 文件命名
 

@@ -14,6 +14,7 @@
 | 6 | 901 | Online Stock Span | `p0901_online_stock_span.py` | `p0901_online_stock_span.md` |
 | 7 | 853 | Car Fleet | `p0853_car_fleet.py` | `p0853_car_fleet.md` |
 | 8 | 71 | Simplify Path | `p0071_simplify_path.py` | `p0071_simplify_path.md` |
+| 9 | 394 | Decode String | `p0394_decode_string.py` | `p0394_decode_string.md` |
 
 ## 基础笔记
 
