@@ -92,6 +92,14 @@ leetcode/
 | 45 | sliding-window | 567 | Permutation in String | 已添加 |
 | 46 | sliding-window | 209 | Minimum Size Subarray Sum | 已添加 |
 | 47 | sliding-window | 658 | Find K Closest Elements | 已添加 |
+| 48 | sliding-window | 76 | Minimum Window Substring | 已添加 |
+| 49 | sliding-window | 239 | Sliding Window Maximum | 已添加 |
+| 50 | binary-search | 35 | Search Insert Position | 已添加 |
+| 51 | binary-search | 374 | Guess Number Higher or Lower | 已添加 |
+| 52 | binary-search | 69 | Sqrt(x) | 已添加 |
+| 53 | binary-search | 74 | Search a 2D Matrix | 已添加 |
+| 54 | binary-search | 875 | Koko Eating Bananas | 已添加 |
+| 55 | binary-search | 1011 | Capacity To Ship Packages Within D Days | 已添加 |
 
 ## 文件命名
 

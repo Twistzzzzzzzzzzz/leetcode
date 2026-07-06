@@ -16,3 +16,5 @@
 | 4 | 567 | Permutation in String | `p0567_permutation_in_string.py` | `p0567_permutation_in_string.md` |
 | 5 | 209 | Minimum Size Subarray Sum | `p0209_minimum_size_subarray_sum.py` | `p0209_minimum_size_subarray_sum.md` |
 | 6 | 658 | Find K Closest Elements | `p0658_find_k_closest_elements.py` | `p0658_find_k_closest_elements.md` |
+| 7 | 76 | Minimum Window Substring | `p0076_minimum_window_substring.py` | `p0076_minimum_window_substring.md` |
+| 8 | 239 | Sliding Window Maximum | `p0239_sliding_window_maximum.py` | `p0239_sliding_window_maximum.md` |

@@ -577,7 +577,89 @@ return False
 排列长度不变，所以窗口长度固定；字符频率完全抵消，就说明找到一个排列。
 ```
 
-### 模板 7：二分固定窗口左边界
+### 模板 7：最短覆盖窗口
+
+适合问：
+
+```text
+最短子串，并且包含目标字符串的所有字符
+```
+
+核心流程：
+
+```python
+freq = {}
+for char in target:
+    freq[char] = freq.get(char, 0) + 1
+
+left = 0
+matched = 0
+need = len(freq)
+answer = float("inf")
+
+for right, char in enumerate(s):
+    if char in freq:
+        freq[char] -= 1
+        if freq[char] == 0:
+            matched += 1
+
+    while matched == need:
+        answer = min(answer, right - left + 1)
+
+        if s[left] in freq:
+            freq[s[left]] += 1
+            if freq[s[left]] > 0:
+                matched -= 1
+        left += 1
+```
+
+记忆点：
+
+```text
+freq 表示还缺多少；matched 表示已经满足了多少类字符。
+```
+
+窗口合法时先更新最短答案，再收缩左边界。
+
+### 模板 8：固定窗口最大值
+
+适合问：
+
+```text
+每个长度为 k 的窗口最大值
+```
+
+核心结构是单调队列，队列里存下标，且对应的值从大到小。
+
+```python
+from collections import deque
+
+queue = deque()
+answer = []
+
+for right in range(len(nums)):
+    while queue and nums[queue[-1]] <= nums[right]:
+        queue.pop()
+
+    queue.append(right)
+
+    left = right - k + 1
+    if queue[0] < left:
+        queue.popleft()
+
+    if right >= k - 1:
+        answer.append(nums[queue[0]])
+```
+
+记忆点：
+
+```text
+队首是当前窗口最大值；队尾负责淘汰不可能成为最大值的元素。
+```
+
+队列里存下标，是为了判断元素是否已经滑出窗口。
+
+### 模板 9：二分固定窗口左边界
 
 适合问：
 
