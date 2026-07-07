@@ -351,6 +351,99 @@ target = 2
 index = 4
 ```
 
+## 左闭右开区间
+
+左闭右开区间写成：
+
+```text
+[left, right)
+```
+
+意思是包含 `left`，不包含 `right`。
+
+所以常见初始化是：
+
+```python
+left = 0
+right = len(arr)
+```
+
+此时 `right` 可以等于 `len(arr)`，因为它不是会被访问的真实下标。
+
+循环条件通常是：
+
+```python
+while left < right:
+```
+
+如果判断后答案在左边，也就是新范围应该变成：
+
+```text
+[left, mid)
+```
+
+那么更新应该写：
+
+```python
+right = mid
+```
+
+而不是：
+
+```python
+right = mid - 1
+```
+
+因为在左闭右开里，`right` 本来就不包含，`right = mid` 已经排除了 `mid`。
+
+和闭区间对比：
+
+| 模板 | 区间含义 | 循环 | 右边界更新 |
+| --- | --- | --- | --- |
+| 闭区间 | `[left, right]` | `while left <= right` | `right = mid - 1` |
+| 左闭右开 | `[left, right)` | `while left < right` | `right = mid` |
+
+## 例子：Time Based Key-Value Store
+
+981. Time Based Key-Value Store 是 HashMap + 二分边界。
+
+外层结构是：
+
+```text
+key -> [(timestamp, value), ...]
+```
+
+因为时间戳是顺序添加的，所以每个 `key` 对应的列表天然按 `timestamp` 有序。
+
+`get(key, timestamp)` 要找的是：
+
+```text
+最后一个 <= timestamp 的记录
+```
+
+可以转化成：
+
+```text
+找第一个 > timestamp 的位置，然后答案是它前一个位置。
+```
+
+也就是：
+
+```python
+left = 0
+right = len(values)
+
+while left < right:
+    mid = (left + right) // 2
+
+    if values[mid][0] <= timestamp:
+        left = mid + 1
+    else:
+        right = mid
+
+index = left - 1
+```
+
 ## 用 lower_bound / upper_bound 找 target 范围
 
 代表题：
@@ -1033,6 +1126,122 @@ left 向右缩
 ```text
 学会判断哪一边有序。
 ```
+
+33. Search in Rotated Sorted Array 是旋转排序数组里查找具体 `target`。
+
+普通二分依赖整个数组有序，但旋转数组整体不一定有序。
+
+不过每次取出 `mid` 后，左半边和右半边至少有一边是有序的。
+
+所以流程是：
+
+1. 先检查 `nums[mid] == target`。
+2. 再判断左半边有序还是右半边有序。
+3. 判断 `target` 是否落在有序的那一边。
+
+左半边有序：
+
+```python
+if nums[left] <= nums[mid]:
+```
+
+如果 `target` 在左半边：
+
+```python
+if nums[left] <= target < nums[mid]:
+    right = mid - 1
+else:
+    left = mid + 1
+```
+
+右半边有序：
+
+```python
+else:
+    if nums[mid] < target <= nums[right]:
+        left = mid + 1
+    else:
+        right = mid - 1
+```
+
+这里的等号要特别注意：
+
+```text
+left 和 right 是还没排除的边界，所以 target 可能等于 nums[left] 或 nums[right]。
+mid 已经被单独检查过，所以后面的范围判断不再包含 nums[mid]。
+```
+
+所以范围判断是：
+
+```python
+nums[left] <= target < nums[mid]
+nums[mid] < target <= nums[right]
+```
+
+81. Search in Rotated Sorted Array II 和 33 的区别是允许重复元素。
+
+重复元素会让有序半边的判断失效。
+
+例如：
+
+```python
+nums[left] == nums[mid] == nums[right]
+```
+
+这时无法判断左半边有序还是右半边有序。
+
+但如果前面已经检查过：
+
+```python
+if nums[mid] == target:
+    return True
+```
+
+那么三端相等且 `nums[mid]` 不是 `target` 时，`nums[left]` 和 `nums[right]` 也不是 `target`。
+
+所以可以安全收缩：
+
+```python
+left += 1
+right -= 1
+```
+
+剩下的逻辑和 33 一样。
+
+注意：因为重复元素可能导致每次只能收缩一格，所以最坏时间复杂度会退化到 O(n)。
+
+153. Find Minimum in Rotated Sorted Array 是旋转排序数组里的结构二分。
+
+它不是在找某个 `target`，而是在找旋转点，也就是最小值的位置。
+
+常用判断是比较：
+
+```python
+nums[mid]
+nums[right]
+```
+
+如果：
+
+```python
+nums[mid] > nums[right]
+```
+
+说明 `mid` 在左边较大的那段里，最小值一定在 `mid` 右边：
+
+```python
+left = mid + 1
+```
+
+否则：
+
+```python
+right = mid
+```
+
+因为 `mid` 仍然可能就是最小值，不能直接排除。
+
+这类题看起来代码量比普通二分少，是因为没有 `nums[mid] == target` 的分支，本质是在判断最小值落在哪一侧。
 
 ### D. 二分答案
 

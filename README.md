@@ -100,6 +100,10 @@ leetcode/
 | 53 | binary-search | 74 | Search a 2D Matrix | 已添加 |
 | 54 | binary-search | 875 | Koko Eating Bananas | 已添加 |
 | 55 | binary-search | 1011 | Capacity To Ship Packages Within D Days | 已添加 |
+| 56 | binary-search | 153 | Find Minimum in Rotated Sorted Array | 已添加 |
+| 57 | binary-search | 33 | Search in Rotated Sorted Array | 已添加 |
+| 58 | binary-search | 81 | Search in Rotated Sorted Array II | 已添加 |
+| 59 | binary-search | 981 | Time Based Key-Value Store | 已添加 |
 
 ## 文件命名
 

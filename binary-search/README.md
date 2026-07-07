@@ -16,3 +16,7 @@
 | 4 | 74 | Search a 2D Matrix | `p0074_search_a_2d_matrix.py` | `p0074_search_a_2d_matrix.md` |
 | 5 | 875 | Koko Eating Bananas | `p0875_koko_eating_bananas.py` | `p0875_koko_eating_bananas.md` |
 | 6 | 1011 | Capacity To Ship Packages Within D Days | `p1011_capacity_to_ship_packages_within_d_days.py` | `p1011_capacity_to_ship_packages_within_d_days.md` |
+| 7 | 153 | Find Minimum in Rotated Sorted Array | `p0153_find_minimum_in_rotated_sorted_array.py` | `p0153_find_minimum_in_rotated_sorted_array.md` |
+| 8 | 33 | Search in Rotated Sorted Array | `p0033_search_in_rotated_sorted_array.py` | `p0033_search_in_rotated_sorted_array.md` |
+| 9 | 81 | Search in Rotated Sorted Array II | `p0081_search_in_rotated_sorted_array_ii.py` | `p0081_search_in_rotated_sorted_array_ii.md` |
+| 10 | 981 | Time Based Key-Value Store | `p0981_time_based_key_value_store.py` | `p0981_time_based_key_value_store.md` |
