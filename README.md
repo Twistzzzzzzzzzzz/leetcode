@@ -104,6 +104,14 @@ leetcode/
 | 57 | binary-search | 33 | Search in Rotated Sorted Array | 已添加 |
 | 58 | binary-search | 81 | Search in Rotated Sorted Array II | 已添加 |
 | 59 | binary-search | 981 | Time Based Key-Value Store | 已添加 |
+| 60 | linked-list | 206 | Reverse Linked List | 已添加 |
+| 61 | linked-list | 21 | Merge Two Sorted Lists | 已添加 |
+| 62 | linked-list | 141 | Linked List Cycle | 已添加 |
+| 63 | linked-list | 19 | Remove Nth Node From End of List | 已添加 |
+| 64 | linked-list | 138 | Copy List with Random Pointer | 已添加 |
+| 65 | linked-list | 2 | Add Two Numbers | 已添加 |
+| 66 | linked-list | 287 | Find the Duplicate Number | 已添加 |
+| 67 | linked-list | 92 | Reverse Linked List II | 已添加 |
 
 ## 文件命名
 
