@@ -112,6 +112,15 @@ leetcode/
 | 65 | linked-list | 2 | Add Two Numbers | 已添加 |
 | 66 | linked-list | 287 | Find the Duplicate Number | 已添加 |
 | 67 | linked-list | 92 | Reverse Linked List II | 已添加 |
+| 68 | trees | 94 | Binary Tree Inorder Traversal | 已添加 |
+| 69 | trees | 144 | Binary Tree Preorder Traversal | 已添加 |
+| 70 | trees | 145 | Binary Tree Postorder Traversal | 已添加 |
+| 71 | trees | 226 | Invert Binary Tree | 已添加 |
+| 72 | trees | 104 | Maximum Depth of Binary Tree | 已添加 |
+| 73 | trees | 543 | Diameter of Binary Tree | 已添加 |
+| 74 | trees | 110 | Balanced Binary Tree | 已添加 |
+| 75 | trees | 100 | Same Tree | 已添加 |
+| 76 | trees | 572 | Subtree of Another Tree | 已添加 |
 
 ## 文件命名
 
