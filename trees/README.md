@@ -19,6 +19,11 @@
 | 7 | 110 | Balanced Binary Tree | `p0110_balanced_binary_tree.py` | `p0110_balanced_binary_tree.md` |
 | 8 | 100 | Same Tree | `p0100_same_tree.py` | `p0100_same_tree.md` |
 | 9 | 572 | Subtree of Another Tree | `p0572_subtree_of_another_tree.py` | `p0572_subtree_of_another_tree.md` |
+| 10 | 235 | Lowest Common Ancestor of a Binary Search Tree | `p0235_lowest_common_ancestor_of_a_binary_search_tree.py` | `p0235_lowest_common_ancestor_of_a_binary_search_tree.md` |
+| 11 | 701 | Insert into a Binary Search Tree | `p0701_insert_into_a_binary_search_tree.py` | `p0701_insert_into_a_binary_search_tree.md` |
+| 12 | 450 | Delete Node in a BST | `p0450_delete_node_in_a_bst.py` | `p0450_delete_node_in_a_bst.md` |
+| 13 | 102 | Binary Tree Level Order Traversal | `p0102_binary_tree_level_order_traversal.py` | `p0102_binary_tree_level_order_traversal.md` |
+| 14 | 199 | Binary Tree Right Side View | `p0199_binary_tree_right_side_view.py` | `p0199_binary_tree_right_side_view.md` |
 
 ## 三种遍历
 
@@ -39,13 +44,15 @@
 7. 110. Balanced Binary Tree
 8. 100. Same Tree
 9. 572. Subtree of Another Tree
-10. 101. Symmetric Tree
-11. 102. Binary Tree Level Order Traversal
-12. 112. Path Sum
-13. 199. Binary Tree Right Side View
-14. 98. Validate Binary Search Tree
-15. 230. Kth Smallest Element in a BST
-16. 235. Lowest Common Ancestor of a Binary Search Tree
-17. 236. Lowest Common Ancestor of a Binary Tree
-18. 105. Construct Binary Tree from Preorder and Inorder Traversal
-19. 124. Binary Tree Maximum Path Sum
+10. 235. Lowest Common Ancestor of a Binary Search Tree
+11. 701. Insert into a Binary Search Tree
+12. 450. Delete Node in a BST
+13. 102. Binary Tree Level Order Traversal
+14. 101. Symmetric Tree
+15. 112. Path Sum
+16. 199. Binary Tree Right Side View
+17. 98. Validate Binary Search Tree
+18. 230. Kth Smallest Element in a BST
+19. 236. Lowest Common Ancestor of a Binary Tree
+20. 105. Construct Binary Tree from Preorder and Inorder Traversal
+21. 124. Binary Tree Maximum Path Sum

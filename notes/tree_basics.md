@@ -1,6 +1,31 @@
 # 树基础
 
-树专题通常是第一次大量接触递归的地方。
+树专题通常是第一次大量接触递归的地方，但必须先修正一个容易形成的印象：
+
+```text
+树题不等于递归题。
+```
+
+更准确地说：
+
+| 层次 | 含义 | 例子 |
+| --- | --- | --- |
+| 数据结构 | 数据怎样组织 | 二叉树、BST |
+| 遍历策略 | 按什么顺序访问 | DFS、BFS |
+| 实现方式 | 代码怎样保存待处理状态 | 递归、`while + stack`、`while + queue` |
+
+它们之间的常见关系是：
+
+```text
+Tree
+├── DFS
+│   ├── 递归
+│   └── stack + while
+└── BFS
+    └── queue + while
+```
+
+递归是 DFS 的常见实现，不是所有树题的固定写法。看到题目后，应该先判断需要 DFS 还是 BFS，再选择递归或迭代实现。
 
 刚开始看树题时，很容易觉得每个节点都会继续分成左右两边，脑子里要同时记住很多层。实际上，大多数二叉树题都可以统一成一个问题：
 
@@ -11,7 +36,7 @@
 怎样把左右子树的结果合并成当前节点的结果？
 ```
 
-树题真正要练的不是把整棵树一次性想完，而是先定义好递归函数的职责，然后相信它能正确处理一棵更小的子树。
+对于适合递归 DFS 的题，真正要练的不是把整棵树一次性想完，而是先定义好递归函数的职责，然后相信它能正确处理一棵更小的子树。
 
 ## 一棵二叉树长什么样
 
@@ -105,7 +130,7 @@ root.right = TreeNode(3)
 
 所以普通二叉树不能因为 `target < node.val` 就只往左走。只有题目明确说明是 BST 时，才能使用这种有序性质。
 
-## 树题为什么经常使用递归
+## 为什么前面的树题经常使用递归 DFS
 
 假设要计算一棵树的最大深度。
 
@@ -468,6 +493,28 @@ level_size = len(queue)
 
 因为处理当前层时会不断把下一层节点加入队列。如果直接按变化中的队列长度循环，就会把不同层混在一起。
 
+### 为什么使用 `deque`
+
+BFS 需要先进先出的队列：从队头取出最早加入的节点，从队尾加入新发现的节点。
+
+Python 的 `deque` 支持：
+
+```python
+queue.append(node)  # 队尾加入，O(1)
+queue.popleft()     # 队头取出，O(1)
+```
+
+普通列表的 `pop(0)` 是 O(n)，因为删除第一个元素后，后面的元素都要向前移动。
+
+| 操作 | `list` | `deque` |
+| --- | --- | --- |
+| 尾部 `append` | O(1) | O(1) |
+| 尾部 `pop` | O(1) | O(1) |
+| 头部删除 | `pop(0)`，O(n) | `popleft()`，O(1) |
+| 常见用途 | 数组、栈 | 队列、BFS |
+
+也可以使用列表加读取下标来避免 `pop(0)`，但 BFS 的标准写法仍然是 `deque + popleft()`。
+
 BFS 常见场景：
 
 - 按层输出
@@ -479,16 +526,27 @@ BFS 常见场景：
 
 ## DFS 和 BFS 怎么选
 
+看到树题时不要先问“递归还是 `while`”，先问题目强调什么访问顺序。
+
 | 题目信号 | 优先考虑 |
 | --- | --- |
-| 需要左右子树的返回值 | DFS 递归 |
-| 深度、高度、平衡、直径 | DFS，通常后序 |
+| 需要左右子树的返回值 | DFS，通常用递归实现 |
+| 深度、高度、平衡、直径 | DFS，通常是后序递归 |
 | 根到叶路径 | DFS + 回溯 |
-| 按层处理 | BFS |
-| 找最浅、最近、最少层数 | BFS |
+| 按层处理、第 `k` 层 | BFS + queue |
+| 找最浅、最近、最少层数 | BFS + queue |
 | BST 第 k 小 | 中序 DFS |
 
 DFS 和 BFS 有时都能完成同一道题，选择更贴合题意、状态更简单的写法即可。
+
+同一种遍历策略也可以有不同实现：
+
+| 遍历策略 | 常见实现 |
+| --- | --- |
+| DFS | 递归，或者 `while + stack` |
+| BFS | `while + queue` |
+
+层序遍历也能使用 DFS 并传入 `depth`，再把节点放入对应层；但实际访问顺序仍是 DFS。题目直接要求逐层处理时，BFS 更符合语义。
 
 ## 路径题与回溯
 
@@ -1087,22 +1145,24 @@ level_size = len(queue)
 7. 110. Balanced Binary Tree
 8. 100. Same Tree
 9. 572. Subtree of Another Tree
-10. 101. Symmetric Tree
-11. 102. Binary Tree Level Order Traversal
-12. 112. Path Sum
-13. 199. Binary Tree Right Side View
-14. 98. Validate Binary Search Tree
-15. 230. Kth Smallest Element in a BST
-16. 235. Lowest Common Ancestor of a Binary Search Tree
-17. 236. Lowest Common Ancestor of a Binary Tree
-18. 105. Construct Binary Tree from Preorder and Inorder Traversal
-19. 124. Binary Tree Maximum Path Sum
+10. 235. Lowest Common Ancestor of a Binary Search Tree
+11. 701. Insert into a Binary Search Tree
+12. 450. Delete Node in a BST
+13. 102. Binary Tree Level Order Traversal
+14. 101. Symmetric Tree
+15. 112. Path Sum
+16. 199. Binary Tree Right Side View
+17. 98. Validate Binary Search Tree
+18. 230. Kth Smallest Element in a BST
+19. 236. Lowest Common Ancestor of a Binary Tree
+20. 105. Construct Binary Tree from Preorder and Inorder Traversal
+21. 124. Binary Tree Maximum Path Sum
 
 前 3 题先用同一个模板掌握前序、中序和后序。
 
 第 4 到 7 题连续练习前序修改、深度返回、全局答案和失败哨兵。
 
-第 8 到 13 题练树的比较、子树搜索、BFS 和路径。
+第 8 到 16 题练树的比较、子树搜索、BST 搜索与修改、BFS 和路径。
 
 第 13 到 17 题进入 BST、公共祖先和构造树。
 
