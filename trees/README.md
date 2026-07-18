@@ -5,6 +5,7 @@
 ## 基础笔记
 
 - [树基础](../notes/tree_basics.md)
+- [Trie 前缀树基础](../notes/trie_basics.md)
 
 ## 题目顺序
 

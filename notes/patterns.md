@@ -367,6 +367,7 @@
 ### 详细笔记
 
 - 详细整理见 [树基础](tree_basics.md)。
+- Trie 专项见 [Trie 前缀树基础](trie_basics.md)。
 
 ### 识别信号
 

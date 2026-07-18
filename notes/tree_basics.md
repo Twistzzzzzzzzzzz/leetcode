@@ -812,6 +812,8 @@ valid(root, float("-inf"), float("inf"))
 
 Trie 是按照字符逐层展开的多叉树，不是二叉树。它适合维护大量字符串并反复查询完整单词或前缀。
 
+这一部分的完整预备资料见 [Trie 前缀树基础](trie_basics.md)。
+
 每个节点通常保存：
 
 ```python
