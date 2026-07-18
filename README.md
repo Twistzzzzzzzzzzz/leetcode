@@ -126,6 +126,13 @@ leetcode/
 | 79 | trees | 450 | Delete Node in a BST | 已添加 |
 | 80 | trees | 102 | Binary Tree Level Order Traversal | 已添加 |
 | 81 | trees | 199 | Binary Tree Right Side View | 已添加 |
+| 82 | trees | 1448 | Count Good Nodes in Binary Tree | 已添加 |
+| 83 | trees | 427 | Construct Quad Tree | 已添加 |
+| 84 | trees | 98 | Validate Binary Search Tree | 已添加 |
+| 85 | trees | 337 | House Robber III | 已添加 |
+| 86 | trees | 1325 | Delete Leaves With a Given Value | 已添加 |
+| 87 | trees | 208 | Implement Trie (Prefix Tree) | 已添加 |
+| 88 | trees | 211 | Design Add and Search Words Data Structure | 已添加 |
 
 ## 文件命名
 

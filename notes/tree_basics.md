@@ -412,8 +412,28 @@ def dfs(node, depth):
 
 - 根到叶路径
 - 路径和
+- 路径最大值或最小值
 - 祖先信息
 - 当前深度
+
+例如判断当前节点是否不小于路径上的所有祖先，可以向下传递路径最大值：
+
+```python
+def dfs(node, path_maximum):
+    if not node:
+        return 0
+
+    is_good = int(node.val >= path_maximum)
+    new_maximum = max(path_maximum, node.val)
+
+    return (
+        is_good
+        + dfs(node.left, new_maximum)
+        + dfs(node.right, new_maximum)
+    )
+```
+
+路径状态只属于当前根到节点的路线。左右分支应分别接收状态，不能让一个全局最大值把不同分支混在一起。
 
 ### 自底向上：让孩子把结果返回给父亲
 
@@ -443,6 +463,51 @@ def dfs(node):
 信息从父节点流向孩子：自顶向下。
 答案从孩子返回父节点：自底向上。
 ```
+
+## 树形动态规划：返回多个状态
+
+有些题中，父节点的选择会限制孩子可以采用的状态。此时 `dfs(node)` 只返回一个无条件最优值往往不够。
+
+例如 337. House Robber III 中，每个节点可以偷或不偷，并且相邻节点不能同时被偷。可以定义：
+
+```python
+dfs(node) -> (rob, not_rob)
+```
+
+含义是：
+
+```text
+rob：偷当前节点时，这棵子树的最大收益
+not_rob：不偷当前节点时，这棵子树的最大收益
+```
+
+状态转移：
+
+```python
+left_rob, left_not_rob = dfs(node.left)
+right_rob, right_not_rob = dfs(node.right)
+
+rob_current = node.val + left_not_rob + right_not_rob
+
+not_rob_current = (
+    max(left_rob, left_not_rob)
+    + max(right_rob, right_not_rob)
+)
+```
+
+当前节点必须先取得左右子树状态，再计算自己的状态，因此这是后序遍历。
+
+树形 DP 的固定思考顺序：
+
+```text
+1. 当前节点有哪些选择？
+2. 父节点做决定时，需要知道当前子树的哪些条件结果？
+3. 空节点的每种状态是什么？
+4. 如何用左右子树状态计算当前状态？
+5. 根节点最终选哪个状态？
+```
+
+当题目出现“选或不选”“父子不能同时选择”“父节点状态限制孩子”等关系时，可以考虑让 DFS 返回多个状态。
 
 ## BFS：广度优先搜索 / 层序遍历
 
@@ -743,6 +808,61 @@ valid(root, float("-inf"), float("inf"))
 
 左子树更新上界，右子树更新下界。
 
+## Trie：前缀树 / 字典树
+
+Trie 是按照字符逐层展开的多叉树，不是二叉树。它适合维护大量字符串并反复查询完整单词或前缀。
+
+每个节点通常保存：
+
+```python
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.is_end = False
+```
+
+字段含义：
+
+```text
+children：字符 -> 下一个 TrieNode
+is_end：当前节点是否为某个完整单词的结尾
+```
+
+插入 `apple` 后，`app` 对应的路径已经存在，但如果没有单独插入 `app`：
+
+```text
+search("app") == False
+startsWith("app") == True
+```
+
+所以：
+
+```text
+search：路径存在，并且最后节点 is_end 为 True
+startsWith：只要求路径存在
+```
+
+三个基础操作都只沿着字符串对应的一条路径向下移动，通常直接使用 `for` 循环，不需要递归。
+
+如果搜索模式包含通配符 `.`，当前字符可能匹配多个孩子，搜索就不再是单一路径。此时可以定义：
+
+```python
+dfs(index, node)
+```
+
+表示从当前 Trie 节点能否匹配搜索字符串的剩余部分。普通字符只递归对应孩子，`.` 则遍历 `node.children.values()`，尝试所有孩子。
+
+任意分支成功即可返回 `True`；只有所有分支都失败后才能返回 `False`。字符全部匹配完时仍要检查 `node.is_end`，确保得到的是完整单词。
+
+设字符串长度为 `L`，插入、完整搜索和前缀搜索的时间复杂度都是 O(L)。
+
+识别信号：
+
+- 多次插入和查询字符串
+- 前缀是否存在
+- 自动补全或搜索建议
+- 许多字符串共享前缀
+
 ## 比较、翻转和对称
 
 这类题通常同时递归两棵子树或两组节点。
@@ -885,6 +1005,45 @@ self.answer = 0
 ```
 
 否则同一个 `Solution` 对象多次调用时可能残留上一次结果。
+
+### 修改树结构：返回处理后的子树根节点
+
+如果当前节点可能被删除或替换，可以让递归函数返回处理完成后的子树根节点：
+
+```python
+def transform(node):
+    if not node:
+        return None
+
+    node.left = transform(node.left)
+    node.right = transform(node.right)
+
+    if 当前节点应该删除:
+        return None
+
+    return node
+```
+
+父节点必须接住孩子返回的新根：
+
+```python
+node.left = transform(node.left)
+node.right = transform(node.right)
+```
+
+`node = None` 只会改变当前函数中的局部变量，不会自动修改父节点保存的 `left` 或 `right`。真正删除节点的是返回 `None` 后，由父节点把对应连接更新为 `None`。
+
+整棵树的根节点也可能变化，因此最外层要写：
+
+```python
+root = transform(root)
+```
+
+或者直接：
+
+```python
+return transform(root)
+```
 
 写题前分开回答：
 
@@ -1126,13 +1285,45 @@ level_size = len(queue)
 - 105. Construct Binary Tree from Preorder and Inorder Traversal
 - 106. Construct Binary Tree from Inorder and Postorder Traversal
 - 108. Convert Sorted Array to Binary Search Tree
+- 427. Construct Quad Tree
 - 236. Lowest Common Ancestor of a Binary Tree
 
 重点：
 
 - 遍历顺序中根的位置
 - 用中序划分左右子树
+- 用区域坐标和大小定义分治子问题
+- 先递归构造孩子，再把返回的子树接到当前节点
 - 后序汇总左右查找结果
+
+### G. 树形动态规划
+
+代表题：
+
+- 337. House Robber III
+- 124. Binary Tree Maximum Path Sum
+
+重点：
+
+- 当前节点有哪些决策状态
+- 父节点需要从孩子获得哪些条件结果
+- 后序取得左右状态后再计算当前状态
+- 多个返回值的含义和顺序必须固定
+
+### H. Trie 前缀树
+
+代表题：
+
+- 208. Implement Trie (Prefix Tree)
+- 211. Design Add and Search Words Data Structure
+
+重点：
+
+- `children` 保存字符到子节点的映射
+- `is_end` 区分完整单词和普通前缀
+- `search` 与 `startsWith` 的结束条件不同
+- 基础操作沿单条路径循环，不需要递归
+- 通配符让搜索产生多个分支，需要 DFS 尝试孩子
 
 ## 推荐刷题顺序
 
@@ -1152,19 +1343,27 @@ level_size = len(queue)
 14. 101. Symmetric Tree
 15. 112. Path Sum
 16. 199. Binary Tree Right Side View
-17. 98. Validate Binary Search Tree
-18. 230. Kth Smallest Element in a BST
-19. 236. Lowest Common Ancestor of a Binary Tree
-20. 105. Construct Binary Tree from Preorder and Inorder Traversal
-21. 124. Binary Tree Maximum Path Sum
+17. 1448. Count Good Nodes in Binary Tree
+18. 98. Validate Binary Search Tree
+19. 230. Kth Smallest Element in a BST
+20. 236. Lowest Common Ancestor of a Binary Tree
+21. 105. Construct Binary Tree from Preorder and Inorder Traversal
+22. 427. Construct Quad Tree
+23. 208. Implement Trie (Prefix Tree)
+24. 211. Design Add and Search Words Data Structure
+25. 1325. Delete Leaves With a Given Value
+26. 337. House Robber III
+27. 124. Binary Tree Maximum Path Sum
 
 前 3 题先用同一个模板掌握前序、中序和后序。
 
 第 4 到 7 题连续练习前序修改、深度返回、全局答案和失败哨兵。
 
-第 8 到 16 题练树的比较、子树搜索、BST 搜索与修改、BFS 和路径。
+第 8 到 17 题练树的比较、子树搜索、BST 搜索与修改、BFS 和路径状态。
 
-第 13 到 17 题进入 BST、公共祖先和构造树。
+第 18 到 22 题继续练习 BST、公共祖先和分治构造树。
+
+第 23 到 24 题学习 Trie 的单路径查询与通配符分支搜索，第 25 题练习后序修改树结构，第 26 题开始接触树形动态规划，再用第 27 题综合练习多状态与全局答案。
 
 124 是 Hard，最后再做。
 
