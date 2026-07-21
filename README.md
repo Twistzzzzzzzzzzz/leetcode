@@ -133,6 +133,10 @@ leetcode/
 | 86 | trees | 1325 | Delete Leaves With a Given Value | 已添加 |
 | 87 | trees | 208 | Implement Trie (Prefix Tree) | 已添加 |
 | 88 | trees | 211 | Design Add and Search Words Data Structure | 已添加 |
+| 89 | heap-priority-queue | 703 | Kth Largest Element in a Stream | 已添加 |
+| 90 | heap-priority-queue | 1046 | Last Stone Weight | 已添加 |
+| 91 | heap-priority-queue | 973 | K Closest Points to Origin | 已添加 |
+| 92 | heap-priority-queue | 215 | Kth Largest Element in an Array | 已添加 |
 
 ## 文件命名
 
