@@ -137,6 +137,11 @@ leetcode/
 | 90 | heap-priority-queue | 1046 | Last Stone Weight | 已添加 |
 | 91 | heap-priority-queue | 973 | K Closest Points to Origin | 已添加 |
 | 92 | heap-priority-queue | 215 | Kth Largest Element in an Array | 已添加 |
+| 93 | heap-priority-queue | 621 | Task Scheduler | 已添加 |
+| 94 | heap-priority-queue | 355 | Design Twitter | 已添加 |
+| 95 | heap-priority-queue | 1834 | Single-Threaded CPU | 已添加 |
+| 96 | heap-priority-queue | 767 | Reorganize String | 已添加 |
+| 97 | heap-priority-queue | 1405 | Longest Happy String | 已添加 |
 
 ## 文件命名
 

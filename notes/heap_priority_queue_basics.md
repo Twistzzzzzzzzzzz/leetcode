@@ -696,6 +696,8 @@ while heap:
 堆空间：O(k)
 ```
 
+K 路归并不一定真的生成完整合并结果。如果只需要前若干个最优元素，可以在得到足够答案后立即停止。对应设计题：[355. Design Twitter](../heap-priority-queue/p0355_design_twitter.md)。
+
 ## 模式七：调度与最早结束时间
 
 很多调度题会反复问：
@@ -711,6 +713,21 @@ while heap:
 ```
 
 堆顶始终是最早可以处理的候选。
+
+有些调度题需要同时区分两类状态：
+
+```text
+最大堆：当前可以执行的任务，按剩余次数选择
+冷却队列：当前不能执行的任务，按恢复时间等待
+```
+
+此时 cooldown 只负责判断任务是否可执行；真正的执行优先级由最大堆决定。对应练习：[621. Task Scheduler](../heap-priority-queue/p0621_task_scheduler.md)。
+
+如果限制只是“刚使用的字符不能在下一轮再次使用”，可以把上一轮字符临时留在堆外，用一个变量代替完整冷却队列。对应练习：[767. Reorganize String](../heap-priority-queue/p0767_reorganize_string.md)。
+
+如果堆顶候选只是在当前局部状态下不合法，可以临时使用第二候选，再把未使用的堆顶原样放回。对应练习：[1405. Longest Happy String](../heap-priority-queue/p1405_longest_happy_string.md)。
+
+如果任务具有预先给定的到达时间，可以先按到达时间排序，用指针维护尚未到达的任务，再用堆维护当前可执行任务；CPU 空闲时直接跳到下一项任务的到达时刻。对应练习：[1834. Single-Threaded CPU](../heap-priority-queue/p1834_single_threaded_cpu.md)。
 
 这类题的难点通常不是调用 `heapq`，而是先明确：
 
@@ -1020,17 +1037,20 @@ if len(heap) > k:
 5. 973. K Closest Points to Origin
 6. 692. Top K Frequent Words
 7. 23. Merge k Sorted Lists
-8. 621. Task Scheduler
-9. 767. Reorganize String
-10. 295. Find Median from Data Stream
+8. 355. Design Twitter
+9. 621. Task Scheduler
+10. 1834. Single-Threaded CPU
+11. 767. Reorganize String
+12. 1405. Longest Happy String
+13. 295. Find Median from Data Stream
 
 前 3 题先练最小堆、最大堆和固定大小堆。
 
 第 4 到 6 题练频率、距离和元组优先级。
 
-第 7 题练 K 路归并。
+第 7 到 8 题练 K 路归并和状态设计。
 
-第 8 到 9 题练调度与贪心。
+第 9 到 12 题练调度与贪心。
 
 295 是双堆综合题，最后再做。
 

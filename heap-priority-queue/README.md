@@ -14,6 +14,11 @@
 | 2 | 1046 | Last Stone Weight | `p1046_last_stone_weight.py` | `p1046_last_stone_weight.md` |
 | 3 | 973 | K Closest Points to Origin | `p0973_k_closest_points_to_origin.py` | `p0973_k_closest_points_to_origin.md` |
 | 4 | 215 | Kth Largest Element in an Array | `p0215_kth_largest_element_in_an_array.py` | `p0215_kth_largest_element_in_an_array.md` |
+| 5 | 621 | Task Scheduler | `p0621_task_scheduler.py` | `p0621_task_scheduler.md` |
+| 6 | 355 | Design Twitter | `p0355_design_twitter.py` | `p0355_design_twitter.md` |
+| 7 | 1834 | Single-Threaded CPU | `p1834_single_threaded_cpu.py` | `p1834_single_threaded_cpu.md` |
+| 8 | 767 | Reorganize String | `p0767_reorganize_string.py` | `p0767_reorganize_string.md` |
+| 9 | 1405 | Longest Happy String | `p1405_longest_happy_string.py` | `p1405_longest_happy_string.md` |
 
 ## 推荐路线
 
@@ -24,9 +29,12 @@
 5. 973. K Closest Points to Origin
 6. 692. Top K Frequent Words
 7. 23. Merge k Sorted Lists
-8. 621. Task Scheduler
-9. 767. Reorganize String
-10. 295. Find Median from Data Stream
+8. 355. Design Twitter
+9. 621. Task Scheduler
+10. 1834. Single-Threaded CPU
+11. 767. Reorganize String
+12. 1405. Longest Happy String
+13. 295. Find Median from Data Stream
 
 ## 核心原则
 
