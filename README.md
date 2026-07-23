@@ -18,8 +18,8 @@ leetcode/
   linked-list/
   trees/
   heap-priority-queue/
-  backtracking/
   graphs/
+  backtracking/
   dynamic-programming/
   notes/
 ```
@@ -37,9 +37,11 @@ leetcode/
 9. linked-list
 10. trees
 11. heap-priority-queue
-12. backtracking
-13. graphs
+12. graphs
+13. backtracking
 14. dynamic-programming
+
+当前根据学习进度先进入 Graph，再回到 Backtracking。Graph 入门直接复用 Tree 的 DFS/BFS，而 Backtracking 的方案枚举与状态恢复可以稍后集中练习。
 
 ## 当前进度
 
@@ -142,6 +144,9 @@ leetcode/
 | 95 | heap-priority-queue | 1834 | Single-Threaded CPU | 已添加 |
 | 96 | heap-priority-queue | 767 | Reorganize String | 已添加 |
 | 97 | heap-priority-queue | 1405 | Longest Happy String | 已添加 |
+| 98 | heap-priority-queue | 1094 | Car Pooling | 已添加 |
+| 99 | graphs | 463 | Island Perimeter | 已添加 |
+| 100 | graphs | 953 | Verifying an Alien Dictionary | 已添加 |
 
 ## 文件命名
 

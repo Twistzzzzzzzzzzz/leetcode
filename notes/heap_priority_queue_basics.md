@@ -729,6 +729,8 @@ K 路归并不一定真的生成完整合并结果。如果只需要前若干个
 
 如果任务具有预先给定的到达时间，可以先按到达时间排序，用指针维护尚未到达的任务，再用堆维护当前可执行任务；CPU 空闲时直接跳到下一项任务的到达时刻。对应练习：[1834. Single-Threaded CPU](../heap-priority-queue/p1834_single_threaded_cpu.md)。
 
+区间按起点进入、按终点离开时，可以排序起点并用最小堆维护最早终点；如果只关心边界净变化且坐标范围很小，差分数组可能更优。对应练习：[1094. Car Pooling](../heap-priority-queue/p1094_car_pooling.md)。
+
 这类题的难点通常不是调用 `heapq`，而是先明确：
 
 ```text
@@ -1040,9 +1042,10 @@ if len(heap) > k:
 8. 355. Design Twitter
 9. 621. Task Scheduler
 10. 1834. Single-Threaded CPU
-11. 767. Reorganize String
-12. 1405. Longest Happy String
-13. 295. Find Median from Data Stream
+11. 1094. Car Pooling
+12. 767. Reorganize String
+13. 1405. Longest Happy String
+14. 295. Find Median from Data Stream
 
 前 3 题先练最小堆、最大堆和固定大小堆。
 
@@ -1050,7 +1053,7 @@ if len(heap) > k:
 
 第 7 到 8 题练 K 路归并和状态设计。
 
-第 9 到 12 题练调度与贪心。
+第 9 到 13 题练调度、区间与贪心。
 
 295 是双堆综合题，最后再做。
 

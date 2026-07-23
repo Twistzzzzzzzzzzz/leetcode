@@ -19,6 +19,7 @@
 | 7 | 1834 | Single-Threaded CPU | `p1834_single_threaded_cpu.py` | `p1834_single_threaded_cpu.md` |
 | 8 | 767 | Reorganize String | `p0767_reorganize_string.py` | `p0767_reorganize_string.md` |
 | 9 | 1405 | Longest Happy String | `p1405_longest_happy_string.py` | `p1405_longest_happy_string.md` |
+| 10 | 1094 | Car Pooling | `p1094_car_pooling.py` | `p1094_car_pooling.md` |
 
 ## 推荐路线
 
@@ -32,9 +33,10 @@
 8. 355. Design Twitter
 9. 621. Task Scheduler
 10. 1834. Single-Threaded CPU
-11. 767. Reorganize String
-12. 1405. Longest Happy String
-13. 295. Find Median from Data Stream
+11. 1094. Car Pooling
+12. 767. Reorganize String
+13. 1405. Longest Happy String
+14. 295. Find Median from Data Stream
 
 ## 核心原则
 
